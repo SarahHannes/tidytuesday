@@ -12,7 +12,7 @@
  - Using `element_rect(fill = "transparent")` to set the background of plot/panel/legend to transparent
  - Using linetype as aes and setting manual values using `scale_linetype_manual(values=c())`
  - Came across various other customizable <a href="http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/#changing-the-position-of-the-legend">`scale_xxx_yyy*s*`</a> 🤩
- - Fiddled a lot using `legend.position=c()` to try to span the horizontal legend centered across the panel length
+ - Fiddled a lot using `legend.position=c()` to try to span the horizontal legend centered across the panel width
  - Combine ggplot object and image object using `ggdraw()`
  - Renewed appreciation for Black History Month!
  - Beautiful <a href="https://github.com/ajstarks/dubois-data-portraits/blob/master/dubois-style.pdf">DuBois style</a> *Thank you @Anthony Starks*
