@@ -16,4 +16,4 @@
  - Combine ggplot object and image object using `ggdraw()`
  
  <br>
- <br><i>Thank you and have a nice day!</i>Sarah🐱‍👤
+ <br><i>Thank you and have a nice day!</i><br>Sarah🐱‍👤
