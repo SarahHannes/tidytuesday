@@ -1,3 +1,11 @@
+## Import Libraries ##
+library(tidyverse)
+library(dplyr)
+# install.packages("tidytuesdayR")
+library(tidytuesdayR)
+library(cowplot) # for ggdraw() to add drawing layer
+library(magick) # for draw_image(), to add image layer to using ggdraw
+
 ## Import Data ##
 georgia_pop <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-02-16/georgia_pop.csv')
 
