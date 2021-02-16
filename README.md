@@ -5,7 +5,7 @@
 <a href="160221%20W.E.B.%20Du%20Bois%20Challenge/plot.R">2021 Week 8      |      W.E.B. Du Bois Challenge</a>
 <br>
 <br><a href="160221%20W.E.B.%20Du%20Bois%20Challenge/plot.R">
-<img src="images/2021_wk8.jpg" width="800"></a>
+<img src="images/2021_wk8_dubois.jpg" width="800"></a>
 <br>
 <br>What I leant this week:
  - Using <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html">`library(magick)`</a> to magically✨✨ transform images 😍
