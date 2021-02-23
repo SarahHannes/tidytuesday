@@ -1,6 +1,18 @@
 # tidytuesday
 <br> Hi there!
-<br> I just started the tidytuesday movement and here *is* my plot so far 😁 *hopefully many more to come~*
+<br> I just started the tidytuesday movement and here are my plots so far 😁 *hopefully many more to come~*
+
+<a href="R/2021_wk9_employment.R">2021 Week 9      |      BLS Employment Data</a>
+<br>
+<br><a href="R/2021_wk9_employment.R">
+<img src="plot/2021_wk9_employment.jpg" width="800"></a>
+<br>
+<br>What I leant this week:
+ - `geom_bar(stat='identity')` and `geom_col()` essentially produce the same output
+ - Adjusting upper and lower limit using <a href="https://ggplot2.tidyverse.org/reference/expand_scale.html">`scale_*_continuous(expand = expansion(mult = c( xx, xx )))`</a>
+ - Filtering out rows using `%in%` ie `dplyr::filter(!industry %in% c(NA, 'Men', 'Women', 'Asian', 'Black or African American '))`
+ - Add `na.rm=T` argument when doing arithmetic operation so that any rows with NA data will be ignored/ parsed as 0 (Otherwise all output with NA rows will be NAs). ie `dplyr::mutate(total=sum(employ_n, na.rm=T))`
+ <br>
 
 <a href="R/2021_wk8_dubois.R">2021 Week 8      |      W.E.B. Du Bois Challenge</a>
 <br>
