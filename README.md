@@ -12,7 +12,7 @@ Hi there!
  - Using `dplyr::top_n(n=1, wt=col)` to get top_n row using `col` as weight
  - Met with roadblock when trying to add image using `ggdraw()` to `coord_polar` plot.. *still figuring this out*
  - Originally wanted to produce something similar like this <a href="https://msucreativecomp.files.wordpress.com/2016/08/data_points.pdf#page=205">starplots by Nathan Yau</a>, but still couldn't figure out how, so this will have to do for now.. 😅
- - Wrestled a lot with angle and radius and arc and what not when I tried to adjust the arc? angle? of the 'petals' so that it doesn't not overlap... *really need to brush up on my dusty trig soon. A very humbling experience indeed (lol)*
+ - Wrestled a lot with angle and radius and arc and what not when I tried to adjust the arc? angle? of the 'petals' so that it doesn't overlap... *really need to brush up on my dusty trig soon. A very humbling experience indeed (lol)*
  <br>
 
 <a href="R/2021_wk9_employment.R">2021 Week 9      |      BLS Employment Data</a>
