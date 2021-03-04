@@ -90,15 +90,15 @@ dummy_joined <- merge(dummy_axis, totalbar)
 options(repr.plot.width=15, repr.plot.height=15)
 
 ggplot() +
-    geom_spoke(data=melted10yr, aes(x=variable, y=value, angle=-1, radius=(value*pi), color=variable), group=1) + # this worked
-    geom_spoke(data=melted10yr, aes(x=variable, y=value, angle=1, radius=(1-value*pi-1), color=variable), group=1) + # this worked
-    geom_text(data = max_like_10yr, aes(x=-Inf, y=1, label=year, size=sum_like),inherit.aes = FALSE, nudge_y=0.3, nudge_x=0.3) + # label for year
-    geom_text(data = max_like_10yr, aes(x=-Inf, y=0.5, label=paste(brand," (",prettyNum(sum_like, big.mark=","),")", sep=""), size=sum_like), inherit.aes = FALSE) + # label for sum_like
+    geom_spoke(data=melted10yr, aes(x=variable, y=value, angle=-1, radius=(value*pi), color=variable), group=1) +
+    geom_spoke(data=melted10yr, aes(x=variable, y=value, angle=1, radius=(1-value*pi-1), color=variable), group=1) +
+    geom_text(data=max_like_10yr, aes(x=-Inf, y=1, label=year, size=sum_like),inherit.aes = FALSE, nudge_y=0.3, nudge_x=0.3) + # label for year
+    geom_text(data=max_like_10yr, aes(x=-Inf, y=0.5, label=paste(brand," (",prettyNum(sum_like, big.mark=","),")", sep=""), size=sum_like), inherit.aes = FALSE) + # label for sum_like
 
-    geom_spoke(data=dummy, aes(x=variable, y=value, angle=-1, radius=(value*pi)), color='gray', group=1, alpha=0.2) + # this worked
-    geom_spoke(data=dummy, aes(x=variable, y=value, angle=1, radius=(1-value*pi-1)),color='gray', group=1, alpha=0.2) + # this worked
-    geom_spoke(data=dummy, aes(x=variable, y=value, angle=1, radius=(1-value*pi-1)),color='gray', group=1, alpha=0.2) + # this worked
-    geom_text(data = dummy_legend, aes(x=-Inf, y=1, label='Ads features'), inherit.aes=FALSE, color='dim gray', size=6) + # label for legend      
+    geom_spoke(data=dummy, aes(x=variable, y=value, angle=-1, radius=(value*pi)), color='gray', group=1, alpha=0.2) +
+    geom_spoke(data=dummy, aes(x=variable, y=value, angle=1, radius=(1-value*pi-1)),color='gray', group=1, alpha=0.2) +
+    geom_spoke(data=dummy, aes(x=variable, y=value, angle=1, radius=(1-value*pi-1)),color='gray', group=1, alpha=0.2) +
+    geom_text(data=dummy_legend, aes(x=-Inf, y=1, label='Ads features'), inherit.aes=FALSE, color='dim gray', size=6) + # label for legend      
     geom_text(data=dummy_joined, aes(x=variable, y=value, label=new_var, color=variable, size=total^6), nudge_x=0.4, nudge_y=0.1, check_overlap=FALSE) + # label for each petals
 
     scale_size_continuous(range=c(5,10)) +
