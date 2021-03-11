@@ -1,7 +1,8 @@
-# To update Rstudio version
-installr: install.packages("installr")
-library(installr)
-updateR()
+#-----
+# 2021 Week 11 TidyTuesday
+# Author: Sarah H
+# Date: 11 Mar 2021
+#-----
 
 # Import Libraries --------------------------
 extrafont::loadfonts(device = "win") # To use custom font
@@ -92,7 +93,8 @@ p1 <- ggplot() +
   
   scale_size_continuous(range=c(5,10)) +
   coord_cartesian(xlim=c(1975,2015), ylim=c(-1, 1)) +
-  labs(title="<span style='color:darkgray'>On a Global Scale, <span style='color:#EDCC8B'>Gender Neutrality </span>Awareness had significantly improved...</span>", subtitle="<span style='color:darkgray'>As the % of films </span><span style='color:#EDCC8B'>**Passing**</span><span style='color:darkgray'> the Bechdel Test continue to increased in the last 4 decades</span>", x='', y='') +
+  labs(title="<span style='color:darkgray'>On a Global Scale, <span style='color:#EDCC8B'>Gender Neutrality </span>Awareness had significantly improved...</span>",
+       subtitle="<span style='color:darkgray'>As the % of films </span><span style='color:#EDCC8B'>**Passing**</span><span style='color:darkgray'> the Bechdel Test continue to increased in the last 4 decades</span>", x='', y='') +
   theme_void(base_family = "Bahnschrift", base_size = 14) +
   theme(
     legend.position = 'none',
