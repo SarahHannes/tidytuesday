@@ -3,7 +3,7 @@ Hi there!
 <br> I just started the tidytuesday movement and here are my plots so far 😁 *hopefully many more to come~*
 
 ## Table of content
-- [2021 Week 8](https://github.com/SarahHannes/tidytuesday/blob/main/README.md#2021-Week-8)
+  * [2021 Week 8](https://github.com/SarahHannes/tidytuesday/blob/main/README.md#2021-Week-8------|------W.E.B.-Du-Bois-Challenge)
 
 
 <!-- toc -->
