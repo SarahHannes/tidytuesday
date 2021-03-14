@@ -2,20 +2,15 @@
 Hi there!
 <br> I just started the tidytuesday movement and here are my plots so far 😁 *hopefully many more to come~*
 
-## Table of content
-  * [2021 Week 8](https://github.com/SarahHannes/tidytuesday/blob/main/README.md#2021-Week-8-|-W.E.B.-Du-Bois-Challenge)
-
-
-<!-- toc -->
 ### <a href="R/2021_wk11_bechdel.R">2021 Week 11      |      Bechdel Test</a>
 <br>
 <br><a href="R/2021_wk11_bechdel.R">
 <img src="plot/2021_wk11_bechdel.png" width="800"></a>
 <br>
 <br>What I leant this week:
-- Had fun exploring `geom_🌖` and created map 🌎 for the first time! 
-- Learnt how to import fonts yay!
-- Finally figured out the best way to combine plots and save it using `ggsave()`
+ - Had fun exploring `geom_🌖` and created map 🌎 for the first time! 
+ - Learnt how to import fonts yay!
+ - Finally figured out the best way to combine plots and save it using `ggsave()`
 
 ### <a href="R/2021_wk10_superbowl.R">2021 Week 10      |      SuperBowl Ads</a>
 <br>
