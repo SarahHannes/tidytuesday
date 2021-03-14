@@ -2,7 +2,12 @@
 Hi there!
 <br> I just started the tidytuesday movement and here are my plots so far 😁 *hopefully many more to come~*
 
-<a href="R/2021_wk11_bechdel.R">2021 Week 11      |      Bechdel Test</a>
+## Table of content
+- [2021 Week 8](https://github.com/SarahHannes/tidytuesday/blob/main/README.md#2021-Week-8)
+
+
+<!-- toc -->
+### <a href="R/2021_wk11_bechdel.R">2021 Week 11      |      Bechdel Test</a>
 <br>
 <br><a href="R/2021_wk11_bechdel.R">
 <img src="plot/2021_wk11_bechdel.png" width="800"></a>
@@ -12,7 +17,7 @@ Hi there!
  - Learnt how to import fonts yay!
  - Finally figured out the best way to combine plots and save it using `ggsave()`
 
-<a href="R/2021_wk10_superbowl.R">2021 Week 10      |      SuperBowl Ads</a>
+### <a href="R/2021_wk10_superbowl.R">2021 Week 10      |      SuperBowl Ads</a>
 <br>
 <br><a href="R/2021_wk10_superbowl.R">
 <img src="plot/2021_wk10_superbowl.jpg" width="800"></a>
@@ -25,7 +30,7 @@ Hi there!
  - Wrestled a lot with angle and radius and arc and what not when I tried to adjust the arc? angle? of the 'petals' so that it doesn't overlap... *really need to brush up on my dusty trig soon. A very humbling experience indeed (lol)*
  <br>
 
-<a href="R/2021_wk9_employment.R">2021 Week 9      |      BLS Employment Data</a>
+### <a href="R/2021_wk9_employment.R">2021 Week 9      |      BLS Employment Data</a>
 <br>
 <br><a href="R/2021_wk9_employment.R">
 <img src="plot/2021_wk9_employment.jpg" width="800"></a>
@@ -37,7 +42,7 @@ Hi there!
  - Add `na.rm=T` argument when doing arithmetic operation so that any rows with NA data will be ignored/ parsed as 0 (Otherwise all output with NA rows will be NAs). ie `dplyr::mutate(total=sum(employ_n, na.rm=T))`
  <br>
 
-<a href="R/2021_wk8_dubois.R">2021 Week 8      |      W.E.B. Du Bois Challenge</a>
+### <a href="R/2021_wk8_dubois.R">2021 Week 8      |      W.E.B. Du Bois Challenge</a>
 <br>
 <br><a href="R/2021_wk8_dubois.R">
 <img src="plot/2021_wk8_dubois.jpg" width="800"></a>
