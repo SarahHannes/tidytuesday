@@ -2,21 +2,15 @@
 Hi there!
 <br> I just started the tidytuesday movement and here are my plots so far 😁 *hopefully many more to come~*
 
-### <a href="R/2021_wk11_bechdel.R">2021 Week 11      |      Bechdel Test</a>
-<br>
-<br><a href="R/2021_wk11_bechdel.R">
-<img src="plot/2021_wk11_bechdel.png" width="800"></a>
-<br>
+### 2021 Week 11 Bechdel Test
+<a href="R/2021_wk11_bechdel.R"> <img src="plot/2021_wk11_bechdel.png" width="800"></a>
 <br>What I leant this week:
- - Had fun exploring `geom_🌖` and created map 🌎 for the first time! 
- - Learnt how to import fonts yay!
- - Finally figured out the best way to combine plots and save it using `ggsave()`
+- Had fun exploring `geom_🌖` and created map 🌎 for the first time! 
+- Learnt how to import fonts yay!
+- Finally figured out the best way to combine plots and save it using `ggsave()`
 
-### <a href="R/2021_wk10_superbowl.R">2021 Week 10      |      SuperBowl Ads</a>
-<br>
-<br><a href="R/2021_wk10_superbowl.R">
-<img src="plot/2021_wk10_superbowl.jpg" width="800"></a>
-<br>
+### 2021 Week 10 SuperBowl Ads
+<a href="R/2021_wk10_superbowl.R"> <img src="plot/2021_wk10_superbowl.jpg" width="800"></a>
 <br>What I leant this week:
  - Using `dplyr::count(col)` as a shorthand to add frequency with grouped by `col`
  - Using `dplyr::top_n(n=1, wt=col)` to get top_n row using `col` as weight
@@ -25,11 +19,8 @@ Hi there!
  - Wrestled a lot with angle and radius and arc and what not when I tried to adjust the arc? angle? of the 'petals' so that it doesn't overlap... *really need to brush up on my dusty trig soon. A very humbling experience indeed (lol)*
  <br>
 
-### <a href="R/2021_wk9_employment.R">2021 Week 9      |      BLS Employment Data</a>
-<br>
-<br><a href="R/2021_wk9_employment.R">
-<img src="plot/2021_wk9_employment.jpg" width="800"></a>
-<br>
+### 2021 Week 9 BLS Employment Data
+<a href="R/2021_wk9_employment.R"> <img src="plot/2021_wk9_employment.jpg" width="800"></a>
 <br>What I leant this week:
  - `geom_bar(stat='identity')` and `geom_col()` essentially produce the same output
  - Adjusting upper and lower limit using <a href="https://ggplot2.tidyverse.org/reference/expand_scale.html">`scale_*_continuous(expand = expansion(mult = c( xx, xx )))`</a>
@@ -37,11 +28,8 @@ Hi there!
  - Add `na.rm=T` argument when doing arithmetic operation so that any rows with NA data will be ignored/ parsed as 0 (Otherwise all output with NA rows will be NAs). ie `dplyr::mutate(total=sum(employ_n, na.rm=T))`
  <br>
 
-### <a href="R/2021_wk8_dubois.R">2021 Week 8      |      W.E.B. Du Bois Challenge</a>
-<br>
-<br><a href="R/2021_wk8_dubois.R">
-<img src="plot/2021_wk8_dubois.jpg" width="800"></a>
-<br>
+### 2021 Week 8 W.E.B. Du Bois Challenge
+<a href="R/2021_wk8_dubois.R"> <img src="plot/2021_wk8_dubois.jpg" width="800"></a>
 <br>What I leant this week:
  - Using <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html">`library(magick)`</a> to magically✨✨ transform images 😍
  - Using `element_rect(fill = "transparent")` to set the background of plot/panel/legend to transparent
