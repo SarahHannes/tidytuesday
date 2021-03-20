@@ -1,3 +1,10 @@
+#-----
+# 2021 Week 12 TidyTuesday
+# Author: Sarah H
+# Date: 21 Mar 2021
+#-----
+
+
 # extrafont::font_import() # do this whenever you install new font, then restart r
 
 # Import libraries ---------------------------------
