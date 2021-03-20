@@ -2,16 +2,20 @@
 Hi there!
 <br> I just started the tidytuesday movement and here are my plots so far 😁 *hopefully many more to come~*
 
+### 2021 Week 12 Video Games
+<a href="R/2021_wk12_vg.R"> <img src="plot/2021_wk12_vg.png" width="800"></a>
+
+
 ### 2021 Week 11 Bechdel Test
 <a href="R/2021_wk11_bechdel.R"> <img src="plot/2021_wk11_bechdel.png" width="800"></a>
-<br>What I leant this week:
+<br>What I learnt this week:
 - Had fun exploring `geom_🌖` and created map 🌎 for the first time! 
 - Learnt how to import fonts yay!
 - Finally figured out the best way to combine plots and save it using `ggsave()`
 
 ### 2021 Week 10 SuperBowl Ads
 <a href="R/2021_wk10_superbowl.R"> <img src="plot/2021_wk10_superbowl.jpg" width="800"></a>
-<br>What I leant this week:
+<br>What I learnt this week:
  - Using `dplyr::count(col)` as a shorthand to add frequency with grouped by `col`
  - Using `dplyr::top_n(n=1, wt=col)` to get top_n row using `col` as weight
  - Met with roadblock when trying to add image using `ggdraw()` to `coord_polar` plot.. *still figuring this out*
@@ -20,7 +24,7 @@ Hi there!
 
 ### 2021 Week 9 BLS Employment Data
 <a href="R/2021_wk9_employment.R"> <img src="plot/2021_wk9_employment.jpg" width="800"></a>
-<br>What I leant this week:
+<br>What I learnt this week:
  - `geom_bar(stat='identity')` and `geom_col()` essentially produce the same output
  - Adjusting upper and lower limit using <a href="https://ggplot2.tidyverse.org/reference/expand_scale.html">`scale_*_continuous(expand = expansion(mult = c( xx, xx )))`</a>
  - Filtering out rows using `%in%` ie `dplyr::filter(!industry %in% c(NA, 'Men', 'Women', 'Asian', 'Black or African American '))`
@@ -28,7 +32,7 @@ Hi there!
 
 ### 2021 Week 8 W.E.B. Du Bois Challenge
 <a href="R/2021_wk8_dubois.R"> <img src="plot/2021_wk8_dubois.jpg" width="800"></a>
-<br>What I leant this week:
+<br>What I learnt this week:
  - Using <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html">`library(magick)`</a> to magically✨✨ transform images 😍
  - Using `element_rect(fill = "transparent")` to set the background of plot/panel/legend to transparent
  - Using linetype as aes and setting manual values using `scale_linetype_manual(values=c())`
