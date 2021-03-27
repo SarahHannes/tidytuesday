@@ -3,7 +3,6 @@ extrafont::loadfonts(device = "win", quiet=T) # do this everytime before loading
 library(tidyverse)
 library(maps)
 library(mapproj)
-# remotes::install_github('thomasp85/ggfx')
 library(ggtext)
 library(magick)
 library(showtext)
@@ -14,10 +13,12 @@ font_add_google("Roboto", "roboto")
 # Load data
 unvotes <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-23/unvotes.csv')
 
+# Preprocessing
 tea_all <- unvotes %>%
   filter(rcid==9085) %>%
   mutate(
     vote=factor(vote, level=c("yes", "abstain", "no")),
+    # mutate some of the countries name to match with library(maps)
     country=ifelse(country=='Bosnia & Herzegovina', 'Bosnia and Herzegovina', country),
     country=ifelse(country=='Czechia', 'Czech Republic', country),
     country=ifelse(country=='North Macedonia', 'Macedonia', country),
@@ -25,8 +26,8 @@ tea_all <- unvotes %>%
     country=ifelse(country=='United States', 'USA', country),
     country=ifelse(country=='Antigua & Barbuda', 'Antigua', country),
     country=ifelse(country=='Congo - Brazzaville', 'Democratic Republic of the Congo', country),
-    country=ifelse(country=='Côte d'Ivoire', 'Ivory Coast', country),
-    country=ifelse(country=='St. Kitts & Nevis', 'Saint Kitts', country),
+    country=ifelse(country=="CÃ´te d'Ivoire", 'Ivory Coast', country),
+    country=ifelse(country=="St. Kitts & Nevis", 'Saint Kitts', country),
     country=ifelse(country=='St. Lucia', 'Saint Lucia', country), 
     country=ifelse(country=='St. Vincent & Grenadines', 'Saint Vincent', country), 
     country=ifelse(country=='Trinidad & Tobago', 'Trinidad', country)
@@ -46,10 +47,12 @@ regionmap_all <- mapall %>%
 # Combine votes with map
 join_map_all <- left_join(x=tea_all, y=mapall, by=c("country" = "region"))
 
+# Read image file
 cup <- image_read("cup_crop.png") %>%
   image_background("none") %>%
   image_fill("#e4dcdc", point = "+100+200", fuzz = 100)
 
+# Info
 tea_info <- tibble(
   label = c(
     "<span style='color:darkgray'> 
@@ -104,4 +107,5 @@ p1 <- ggplot() +
     legend.position = "none"
   )
 
+# Save plot
 ggsave("2021_wk13_unvotes.png", plot = p1, type = 'cairo', width = 9, height = 7, dpi = 300, units = "in", bg = "#fcf7f4")
