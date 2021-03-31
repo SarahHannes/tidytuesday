@@ -2,6 +2,9 @@
 Hi there!
 <br> I just started the tidytuesday movement and here are my plots so far 😁 *hopefully many more to come~*
 
+### 2021 Week 14 Makeup Shades
+<a href="R/2021_wk14_makeup.R"> <img src="plot/2021_wk14_makeup.png" width="500"></a>
+
 ### 2021 Week 13 UN Votes
 <a href="R/2021_wk13_unvotes.R"> <img src="plot/2021_wk13_unvotes.png" width="800"></a>
 
