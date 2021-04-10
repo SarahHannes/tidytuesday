@@ -48,22 +48,76 @@ p1 <- ggplot() +
    
   # Annotate 1998
   geom_point(data=palm %>% filter(year==1998), aes(x=1998, y=total, color=entity), size=1.7) +
-  geom_text_repel(data=palm %>% filter(year==1998, entity=='Malaysia'), aes(x=1998, y=total, label=paste0('1998\n',entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity), box.padding = 0.5, max.overlaps = Inf, min.segment.length = 0, force=1, nudge_x=-5, nudge_y = 1000000, seed=1, hjust=1, lineheight=0.7, family=font,  segment.linetype = 2) +
-  geom_text_repel(data=palm %>% filter(year==1998, entity=='Indonesia'), aes(x=1998, y=total, label=paste0('1998\n',entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity), box.padding = 0.5, max.overlaps = Inf, min.segment.length = 0, force=1, nudge_x=2, nudge_y = -1500000, seed=1, hjust=0, lineheight=0.7, family=font,  segment.linetype = 2) +
+  geom_text_repel(data=palm %>% filter(year==1998, entity=='Malaysia'), aes(x=1998, y=total, label=paste0('1998\n',entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity), 
+                  box.padding = 0.5,
+                  max.overlaps = Inf,
+                  min.segment.length = 0, # always draw segment with text
+                  force=1,
+                  nudge_x=-5,
+                  nudge_y = 1000000,
+                  seed=1, # to get the same position each time
+                  hjust=1,
+                  lineheight=0.7,
+                  segment.linetype = 2, # dotted segment
+                  family=font) +
+  geom_text_repel(data=palm %>% filter(year==1998, entity=='Indonesia'), aes(x=1998, y=total, label=paste0('1998\n',entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity),
+                  box.padding = 0.5,
+                  max.overlaps = Inf,
+                  min.segment.length = 0,
+                  force=1,
+                  nudge_x=2,
+                  nudge_y = -1500000,
+                  seed=1,
+                  hjust=0,
+                  lineheight=0.7,
+                  segment.linetype = 2,
+                  family=font) +
   
   # Annotate 2006
   geom_point(data=palm %>% filter(year==2006), aes(x=2006, y=total, color=entity), size=1.7) +
-  geom_text_repel(data=palm %>% filter(year==2006), aes(x=2006, y=total, label=paste0('2006\n', entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity), box.padding = 0.5, max.overlaps = Inf, min.segment.length = 0, force=1, nudge_x=-3, nudge_y = 1000000, seed=1, hjust=1, lineheight=0.7, family=font,  segment.linetype = 2) +
+  geom_text_repel(data=palm %>% filter(year==2006), aes(x=2006, y=total, label=paste0('2006\n', entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity),
+                  box.padding = 0.5,
+                  max.overlaps = Inf,
+                  min.segment.length = 0,
+                  force=1,
+                  nudge_x=-3,
+                  nudge_y = 1000000,
+                  seed=1,
+                  hjust=1,
+                  lineheight=0.7,
+                  family=font,
+                  segment.linetype = 2) +
  
   # Annotate 2014
   geom_point(data=palm %>% filter(year==2014), aes(x=2014, y=total, color=entity), size=1.7) +
-  geom_text_repel(data=palm %>% filter(year==2014), aes(x=2014, y=total, label=paste0('2014\n', entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity), box.padding = 0.5, max.overlaps = Inf, min.segment.length = Inf, force_pull=1, nudge_x=1.5, nudge_y = 100, seed=1, hjust=0, lineheight=0.7, family=font,  segment.linetype = 2) + 
+  geom_text_repel(data=palm %>% filter(year==2014), aes(x=2014, y=total, label=paste0('2014\n', entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity),
+                  box.padding = 0.5,
+                  max.overlaps = Inf,
+                  min.segment.length = Inf, # Never draw segment with text
+                  force_pull=1,
+                  nudge_x=1.5,
+                  nudge_y = 100,
+                  seed=1,
+                  hjust=0,
+                  lineheight=0.7,
+                  family=font,
+                  segment.linetype = 2) + 
   
   # Additional annotations 1998 and 2006
   annotate("text", x = 1975, y = 10000000, label = "Malaysia suffered a dip in 1998", size=3, family=font, color=annos_col) +
-  geom_curve(aes(x=1975, xend=1998, y=11000000, yend=10000000), size=0.5, curvature = -0.5, arrow = arrow(length = unit(0.1, "inches")), lineend = "round", alpha=0.3, color=annos_col) +
-  annotate("text", x = 2008, y = 10000000, label = str_wrap("Indonesia exceeded Malaysia in palm oil production. This could be due to the increase in independent small-holder plots in response to a series of policy provided by the Indonesian Government for the development of 'community plantations'. Resulting in a total of 5.45 M hectares of palm oil cultivation area.", 35), hjust=0, vjust=1, size=3, family=font, color=annos_col) +
-  geom_segment(aes(x=2015, xend=2006, y=10000000, yend=15300000), size=0.5, arrow = arrow(length = unit(0.1, "inches")), lineend = "round", alpha=0.3, color=annos_col) +
+  geom_curve(aes(x=1975, xend=1998, y=11000000, yend=10000000), size=0.5, curvature = -0.5, arrow = arrow(length = unit(0.1, "inches")),
+             lineend = "round",
+             alpha=0.3,
+             color=annos_col) +
+  annotate("text", x = 2008, y = 10000000,
+           label = str_wrap("Indonesia exceeded Malaysia in palm oil production. This could be due to the increase in independent small-holder plots in response to a series of policy provided by the Indonesian Government for the development of 'community plantations'. Resulting in a total of 5.45 M hectares of palm oil cultivation area.", 35),
+           hjust=0, vjust=1, size=3, family=font, color=annos_col) +
+  geom_segment(aes(x=2015, xend=2006, y=10000000, yend=15300000),
+               size=0.5,
+               arrow = arrow(length = unit(0.1, "inches")),
+               lineend = "round",
+               alpha=0.3,
+               color=annos_col) +
   
   scale_color_manual(values = pal) +
   scale_y_continuous(limits = c(0,max(palm$total)+80000), labels = scales::comma) +
