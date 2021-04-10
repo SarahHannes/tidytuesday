@@ -1,15 +1,19 @@
+# Load libraries
 extrafont::loadfonts(device = "win", quiet=T)
 library(tidyverse)
 library(ggrepel)
 library("wesanderson")
 
+# Load data
 vegetable_oil <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-04-06/vegetable_oil.csv')
 
+# Palettes and font
 annos_col <- 'darkgray'
 bgcol <- "#fafafc"
-font <- 'Bahnschrift'
 pal <- c(wes_palettes$GrandBudapest2[1],wes_palettes$GrandBudapest2[2])
+font <- 'Bahnschrift'
 
+# Pre-processing
 palm <- vegetable_oil %>%
   group_by(year, entity, crop_oil) %>%
   filter(entity %in% c('Malaysia', 'Indonesia'), crop_oil=='Palm') %>%
@@ -18,11 +22,9 @@ palm <- vegetable_oil %>%
   summarise(total) %>%
   ungroup()
 
+# Plot
 p1 <- ggplot() +
   geom_line(data=palm, aes(x=year, y=total, color=entity), size=1) +
-  
-  geom_point(data=palm %>% filter(year==1961), aes(x=1961, y=total, color=entity), size=1.7) +
-  geom_text(data=palm %>% filter(year==1961), aes(x=1961, y=total+1000000, label=year), color=annos_col) +
   
   # Highlight 1997
   geom_rect(aes(xmin=1997, xmax=1998, ymin=-Inf, ymax=Inf), fill='gray', alpha=0.2) +
@@ -39,24 +41,25 @@ p1 <- ggplot() +
                   family=font,
                   color=annos_col,
                   alpha=0.3) +
-  
-  # Highlight 2005
-  #geom_rect(aes(xmin=2005, xmax=2006, ymin=-Inf, ymax=Inf), fill='gray', alpha=0.2) +
-  
-  # Annotate 2006
-  geom_point(data=palm %>% filter(year==2006), aes(x=2006, y=total, color=entity), size=1.7) +
-  geom_text_repel(data=palm %>% filter(year==2006), aes(x=2006, y=total, label=paste0('2006\n', entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity), box.padding = 0.5, max.overlaps = Inf, min.segment.length = 0, force=1, nudge_x=-3, nudge_y = 1000000, seed=1, hjust=1, lineheight=0.7, family=font,  segment.linetype = 2) +
-  
-  # Annotate 2014
-  geom_point(data=palm %>% filter(year==2014), aes(x=2014, y=total, color=entity), size=1.7) +
-  geom_text_repel(data=palm %>% filter(year==2014), aes(x=2014, y=total, label=paste0('2014\n', entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity), box.padding = 0.5, max.overlaps = Inf, min.segment.length = Inf, force_pull=1, nudge_x=1.5, nudge_y = 100, seed=1, hjust=0, lineheight=0.7, family=font,  segment.linetype = 2) +
-  
+
+  # Annotate 1961
+  geom_point(data=palm %>% filter(year==1961), aes(x=1961, y=total, color=entity), size=1.7) +
+  geom_text(data=palm %>% filter(year==1961), aes(x=1961, y=total+1000000, label=year), color=annos_col) +
+   
   # Annotate 1998
   geom_point(data=palm %>% filter(year==1998), aes(x=1998, y=total, color=entity), size=1.7) +
   geom_text_repel(data=palm %>% filter(year==1998, entity=='Malaysia'), aes(x=1998, y=total, label=paste0('1998\n',entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity), box.padding = 0.5, max.overlaps = Inf, min.segment.length = 0, force=1, nudge_x=-5, nudge_y = 1000000, seed=1, hjust=1, lineheight=0.7, family=font,  segment.linetype = 2) +
   geom_text_repel(data=palm %>% filter(year==1998, entity=='Indonesia'), aes(x=1998, y=total, label=paste0('1998\n',entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity), box.padding = 0.5, max.overlaps = Inf, min.segment.length = 0, force=1, nudge_x=2, nudge_y = -1500000, seed=1, hjust=0, lineheight=0.7, family=font,  segment.linetype = 2) +
   
+  # Annotate 2006
+  geom_point(data=palm %>% filter(year==2006), aes(x=2006, y=total, color=entity), size=1.7) +
+  geom_text_repel(data=palm %>% filter(year==2006), aes(x=2006, y=total, label=paste0('2006\n', entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity), box.padding = 0.5, max.overlaps = Inf, min.segment.length = 0, force=1, nudge_x=-3, nudge_y = 1000000, seed=1, hjust=1, lineheight=0.7, family=font,  segment.linetype = 2) +
+ 
+  # Annotate 2014
+  geom_point(data=palm %>% filter(year==2014), aes(x=2014, y=total, color=entity), size=1.7) +
+  geom_text_repel(data=palm %>% filter(year==2014), aes(x=2014, y=total, label=paste0('2014\n', entity,'\n',scales::label_number_si(accuracy=0.1)(total)), color=entity), box.padding = 0.5, max.overlaps = Inf, min.segment.length = Inf, force_pull=1, nudge_x=1.5, nudge_y = 100, seed=1, hjust=0, lineheight=0.7, family=font,  segment.linetype = 2) + 
   
+  # Additional annotations 1998 and 2006
   annotate("text", x = 1975, y = 10000000, label = "Malaysia suffered a dip in 1998", size=3, family=font, color=annos_col) +
   geom_curve(aes(x=1975, xend=1998, y=11000000, yend=10000000), size=0.5, curvature = -0.5, arrow = arrow(length = unit(0.1, "inches")), lineend = "round", alpha=0.3, color=annos_col) +
   annotate("text", x = 2008, y = 10000000, label = str_wrap("Indonesia exceeded Malaysia in palm oil production. This could be due to the increase in independent small-holder plots in response to a series of policy provided by the Indonesian Government for the development of 'community plantations'. Resulting in a total of 5.45 M hectares of palm oil cultivation area.", 35), hjust=0, vjust=1, size=3, family=font, color=annos_col) +
