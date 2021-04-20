@@ -2,28 +2,31 @@
 Hi there!
 <br> I just started the tidytuesday movement and here are my plots so far 😁 *hopefully many more to come~*
 
-### 2021 Week 15 Deforestation
-<a href="R/2021_wk15_deforestation.R"> <img src="plot/2021_wk15_deforestation.png" width="900"></a>
+### 2021 Week 16 Post Office <a href="R/2021_wk16_postoffice.R">[Code]</a>
+<img src="plot/2021_wk16_postoffice.png" width="900">
 
-### 2021 Week 14 Makeup Shades
-<a href="R/2021_wk14_makeup.R"> <img src="plot/2021_wk14_makeup.png" width="900"></a>
+### 2021 Week 15 Deforestation <a href="R/2021_wk15_deforestation.R">[Code]</a>
+<img src="plot/2021_wk15_deforestation.png" width="900">
 
-### 2021 Week 13 UN Votes
-<a href="R/2021_wk13_unvotes.R"> <img src="plot/2021_wk13_unvotes.png" width="900"></a>
+### 2021 Week 14 Makeup Shades <a href="R/2021_wk14_makeup.R">[Code]</a>
+<img src="plot/2021_wk14_makeup.png" width="900">
 
-### 2021 Week 12 Video Games
-<a href="R/2021_wk12_vg.R"> <img src="plot/2021_wk12_vg.png" width="900"></a>
+### 2021 Week 13 UN Votes <a href="R/2021_wk13_unvotes.R">[Code]</a>
+<img src="plot/2021_wk13_unvotes.png" width="900">
+
+### 2021 Week 12 Video Games <a href="R/2021_wk12_vg.R">[Code]</a>
+<img src="plot/2021_wk12_vg.png" width="900">
 
 
-### 2021 Week 11 Bechdel Test
-<a href="R/2021_wk11_bechdel.R"> <img src="plot/2021_wk11_bechdel.png" width="900"></a>
+### 2021 Week 11 Bechdel Test <a href="R/2021_wk11_bechdel.R">[Code]</a>
+<img src="plot/2021_wk11_bechdel.png" width="900">
 <br>What I learnt this week:
 - Had fun exploring `geom_🌖` and created map 🌎 for the first time! 
 - Learnt how to import fonts yay!
 - Finally figured out the best way to combine plots and save it using `ggsave()`
 
-### 2021 Week 10 SuperBowl Ads
-<a href="R/2021_wk10_superbowl.R"> <img src="plot/2021_wk10_superbowl.jpg" width="900"></a>
+### 2021 Week 10 SuperBowl Ads <a href="R/2021_wk10_superbowl.R">[Code]</a>
+<img src="plot/2021_wk10_superbowl.jpg" width="900">
 <br>What I learnt this week:
  - Using `dplyr::count(col)` as a shorthand to add frequency with grouped by `col`
  - Using `dplyr::top_n(n=1, wt=col)` to get top_n row using `col` as weight
@@ -31,16 +34,16 @@ Hi there!
  - Originally wanted to produce something similar like this <a href="https://msucreativecomp.files.wordpress.com/2016/08/data_points.pdf#page=205">starplots by Nathan Yau</a>, but still couldn't figure out how, so this will have to do for now.. 😅
  - Wrestled a lot with angle and radius and arc and what not when I tried to adjust the arc? angle? of the 'petals' so that it doesn't overlap... *really need to brush up on my dusty trig soon. A very humbling experience indeed (lol)*
 
-### 2021 Week 9 BLS Employment Data
-<a href="R/2021_wk9_employment.R"> <img src="plot/2021_wk9_employment.jpg" width="900"></a>
+### 2021 Week 9 BLS Employment Data <a href="R/2021_wk9_employment.R">[Code]</a>
+<img src="plot/2021_wk9_employment.jpg" width="900">
 <br>What I learnt this week:
  - `geom_bar(stat='identity')` and `geom_col()` essentially produce the same output
  - Adjusting upper and lower limit using <a href="https://ggplot2.tidyverse.org/reference/expand_scale.html">`scale_*_continuous(expand = expansion(mult = c( xx, xx )))`</a>
  - Filtering out rows using `%in%` ie `dplyr::filter(!industry %in% c(NA, 'Men', 'Women', 'Asian', 'Black or African American '))`
  - Add `na.rm=T` argument when doing arithmetic operation so that any rows with NA data will be ignored/ parsed as 0 (Otherwise all output with NA rows will be NAs). ie `dplyr::mutate(total=sum(employ_n, na.rm=T))`
 
-### 2021 Week 8 W.E.B. Du Bois Challenge
-<a href="R/2021_wk8_dubois.R"> <img src="plot/2021_wk8_dubois.jpg" width="900"></a>
+### 2021 Week 8 W.E.B. Du Bois Challenge <a href="R/2021_wk8_dubois.R">[Code]</a>
+<img src="plot/2021_wk8_dubois.jpg" width="900">
 <br>What I learnt this week:
  - Using <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html">`library(magick)`</a> to magically✨✨ transform images 😍
  - Using `element_rect(fill = "transparent")` to set the background of plot/panel/legend to transparent
