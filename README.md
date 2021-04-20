@@ -34,7 +34,7 @@ Hi there!
  - Wrestled a lot with angle and radius and arc and what not when I tried to adjust the arc? angle? of the 'petals' so that it doesn't overlap... *really need to brush up on my dusty trig soon. A very humbling experience indeed (lol)*
 
 ## 2021 Week 9 BLS Employment Data <a href="R/2021_wk9_employment.R">[Code]</a>
-<img src="plot/2021_wk9_employment.jpg" width="900">
+<img src="plot/2021_wk9_employment.jpg" width="900"></a>
 <br>What I learnt this week:
  - `geom_bar(stat='identity')` and `geom_col()` essentially produce the same output
  - Adjusting upper and lower limit using <a href="https://ggplot2.tidyverse.org/reference/expand_scale.html">`scale_*_continuous(expand = expansion(mult = c( xx, xx )))`</a>
