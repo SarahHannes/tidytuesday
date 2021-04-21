@@ -1,6 +1,8 @@
 # tidytuesday
-Hi there!
-<br> I just started the tidytuesday movement and here are my plots so far 😁 *hopefully many more to come~*
+
+Contributions made for #TidyTuesday, a weekly data project in R from the R4DS online learning community.
+A new data is shared by <a href="https://github.com/rfordatascience/tidytuesday/blob/master/README.md">R4DS Community</a> each week.
+By participating, I aim to improve my R language fluency especially in using {tidyverse} package, and learning, discovering and improving my data storytelling fundamentals.
 
 ## 2021 Week 16 Post Office <a href="R/2021_wk16_postoffice.R">[Code]</a>
 <img src="plot/2021_wk16_postoffice.png" width="900">
