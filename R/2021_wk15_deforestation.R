@@ -1,3 +1,9 @@
+#-----
+# 2021 Week 15 TidyTuesday
+# Author: Sarah H
+# Date: 10 Apr 2021
+#-----
+
 # Load libraries
 extrafont::loadfonts(device = "win", quiet=T)
 library(tidyverse)
