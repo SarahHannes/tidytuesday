@@ -1,3 +1,9 @@
+#-----
+# 2021 Week 8 TidyTuesday
+# Author: Sarah H
+# Date: 16 Feb 2021
+#-----
+
 ## Import Data ##
 georgia_pop <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-02-16/georgia_pop.csv')
 
