@@ -1,7 +1,8 @@
-#-------
-# Author: Sarah Hannes
+#-----
+# 2021 Week 16 TidyTuesday
+# Author: Sarah H
 # Date: 21 Apr 2021
-#-------
+#-----
 
 # Load libraries
 extrafont::loadfonts(device = "win", quiet=T)
