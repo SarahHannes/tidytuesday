@@ -1,3 +1,8 @@
+#-------
+# Author: Sarah Hannes
+# Date: 21 Apr 2021
+#-------
+
 # Load libraries
 extrafont::loadfonts(device = "win", quiet=T)
 library(tidyverse)
