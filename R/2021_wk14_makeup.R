@@ -1,3 +1,9 @@
+#-----
+# 2021 Week 14 TidyTuesday
+# Author: Sarah H
+# Date: 1 Apr 2021
+#-----
+
 # Import Libraries
 extrafont::loadfonts(device = "win", quiet=T) # do this everytime before loading ggplot
 library(tidyverse)
