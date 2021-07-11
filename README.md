@@ -4,8 +4,9 @@ Contributions made for #TidyTuesday, a weekly data project in R from the R4DS on
 A new data is shared by <a href="https://github.com/rfordatascience/tidytuesday/blob/master/README.md">R4DS Community</a> each week.
 By participating, I aim to improve my R language fluency especially in using {tidyverse} package, while learning, discovering and improving my data storytelling fundamentals.
 
-## 2021 Week 28 International Independence <a href="R/2021_wk28_independence.R">[Code]</a>
+## 2021 Week 28 International Independence <a href="R/2021_wk28_independence.R">[Code_1]</a> <a href="R/2021_wk28_independence_b.R">[Code_2]</a>
 <img src="plot/2021_wk28_independence.png" width="900">
+<img src="plot/2021_wk28_independence_b.png" width="900">
 
 ## 2021 Week 16 Post Office <a href="R/2021_wk16_postoffice.R">[Code]</a>
 <img src="plot/2021_wk16_postoffice.png" width="900">
