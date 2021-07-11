@@ -4,7 +4,7 @@
 # Date: 11 Jul 2021
 #-----
 
-# Load libraries
+# Load libraries ------------------------------------------
 extrafont::loadfonts(device = "win", quiet=T)
 library(tidyverse)
 library(stringr)
@@ -69,7 +69,7 @@ legend <- ind_asia %>%
   ungroup() %>%
   mutate(rank = rank(-n, ties='random')) # rank by desc(n), and break ties arbitrarily
 
-# Palettes and font---------------------------------------
+# Palettes and font ---------------------------------------
 
 label_pal <- c('#FCEFEF', '#F5FBEF', 'black', 'white', "#696969")
 bg_pal <- c('#fcf7f4')
@@ -79,7 +79,7 @@ font <- c('Bahnschrift', 'Bebas Neue', 'Signika', 'Oswald', 'Raleway')
 colourCount <- length(unique(ind_asia$independence_from))
 
 
-# Plots---------------------------------------
+# Plots ---------------------------------------
 
 # bottom plot
 p2 <- ggplot() +
