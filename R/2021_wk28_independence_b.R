@@ -1,7 +1,7 @@
 #-----
 # 2021 Week 28 TidyTuesday
 # Author: Sarah H
-# Date: 11 Jul 2021
+# Date: 12 Jul 2021
 #-----
 
 # Load libraries ------------------------------------------
@@ -118,7 +118,6 @@ p1 <- ggplot() +
   geom_text(data=legend, aes(x=rank, y=-0.4, label=str_wrap(independence_from, 10)), lineheight=0.3, family=font[5], size=8, color=label_pal[5], vjust=1) +
   
   # colonized numbers inside the legend circles
-  #geom_text(data=legend, aes(x=rank, y=0.1, label=n), family=font[5], size=10, color=label_pal[5]) +
   geom_text(data=legend, aes(x=rank, y=0.1, label=n), family=font[5], size=10, color=label_pal[4], fontface='bold') +
   
   # annotate and arrow
